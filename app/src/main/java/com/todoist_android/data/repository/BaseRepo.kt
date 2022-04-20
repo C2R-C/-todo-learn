@@ -1,6 +1,5 @@
-package com.todoist_android.data.network.repository
+package com.todoist_android.data.repository
 
-import android.util.Log
 import com.todoist_android.data.network.APIResource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -3,7 +3,7 @@ package com.todoist_android.data.repository
 import com.todoist_android.data.network.APIAuthentication
 import com.todoist_android.data.network.APIResource
 import com.todoist_android.data.requests.SignUpRequest
-import com.todoist_android.data.network.repository.BaseRepo
+import com.todoist_android.data.repository.BaseRepo
 import com.todoist_android.data.requests.LoginRequest
 import com.todoist_android.data.requests.UpdateUserRequest
 import com.todoist_android.data.responses.LoginResponse
@@ -22,7 +22,7 @@ interface AuthRepo{
 class AuthRepoImpl @Inject constructor  (
     private val authApi: APIAuthentication,
     private val userPrefs: UserPreferences
-) : AuthRepo,BaseRepo() {
+) : AuthRepo, BaseRepo() {
 
    override suspend fun login(email: String, password: String) = safeApiCall {
         authApi.login(loginRequest = LoginRequest(email, password))

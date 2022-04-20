@@ -1,14 +1,7 @@
 package com.todoist_android.data.repository
 
-import androidx.lifecycle.viewModelScope
-import com.todoist_android.data.models.TodoModel
 import com.todoist_android.data.models.UserModel
 import com.todoist_android.data.network.UserApi
-import com.todoist_android.data.network.repository.BaseRepo
-import com.todoist_android.data.requests.UpdateUserRequest
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.shareIn
 import javax.inject.Inject
 
 class UserRepo @Inject constructor(
